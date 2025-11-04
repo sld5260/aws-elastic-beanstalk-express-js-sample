@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      # Install project dependencies
+      - npm install
+  build:
+    commands:
+      # Run the security audit
+      - echo "Running npm audit..."
+      - npm audit
+      # Optionally, fail the build only if the vulnerability level is 'moderate' or higher
+      # - npm audit --audit-level=moderate
+  # post_build:
+  # commands:
+  # Other post-build commands, e.g., generating a report
