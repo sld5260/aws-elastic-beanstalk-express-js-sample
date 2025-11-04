@@ -6,6 +6,7 @@ phases:
       - npm install
   build:
     commands:
+      - npm i --save
       # Run the security audit
       - echo "Running npm audit..."
       - npm audit
